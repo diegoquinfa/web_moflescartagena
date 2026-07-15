@@ -19,11 +19,11 @@ const FAQS = [
   },
   {
     q: "¿Necesito cita previa?",
-    a: "No es obligatorio, pero puedes escribirnos por WhatsApp para coordinar tu visita y evitar esperas.",
+    a: "No es obligatorio, pero puedes llamarnos para coordinar tu visita y evitar esperas.",
   },
   {
     q: "¿Cómo pido una cotización?",
-    a: "Escríbenos por WhatsApp al 321 889 5253 con la marca y modelo de tu vehículo y el problema que presenta. Te respondemos rápido.",
+    a: "Llámanos al 321 889 5253 con la marca y modelo de tu vehículo y el problema que presenta. Te orientamos rápido.",
   },
 ]
 

@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import { MessageCircle, MapPin, Clock } from 'lucide-react'
-import { WHATSAPP_URL, PHONE_TEL, PHONE_DISPLAY, ADDRESS } from './site-data'
+import { Phone, MapPin, Clock } from 'lucide-react'
+import { TEL_HREF, PHONE_DISPLAY, ADDRESS } from './site-data'
 import { PrimaryButton, PlateTag, Eyebrow, HazardBar } from './ui'
 import StoreStatusBadge from '@/shared/ui/components/store-status-badge'
 
@@ -27,11 +27,11 @@ export function Hero() {
           </p>
 
           <div className="flex flex-wrap items-center gap-4">
-            <PrimaryButton href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="h-4 w-4" aria-hidden="true" />
-              Cotiza por WhatsApp
+            <PrimaryButton href={TEL_HREF}>
+              <Phone className="h-4 w-4" aria-hidden="true" />
+              Llama y cotiza
             </PrimaryButton>
-            <a href={`tel:${PHONE_TEL}`}>
+            <a href={TEL_HREF}>
               <PlateTag className="py-2.5 text-[15px]">{PHONE_DISPLAY}</PlateTag>
             </a>
           </div>

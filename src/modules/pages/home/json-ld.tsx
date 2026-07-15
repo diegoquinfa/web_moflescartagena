@@ -1,7 +1,6 @@
 import {
   PHONE_TEL,
   PHONE_DISPLAY,
-  WHATSAPP_URL,
   INSTAGRAM_URL,
   ADDRESS,
   NAV_LINKS,
@@ -36,11 +35,11 @@ const FAQS = [
   },
   {
     q: '¿Necesito cita previa?',
-    a: 'No es obligatorio, pero puedes escribirnos por WhatsApp para coordinar tu visita y evitar esperas.',
+    a: 'No es obligatorio, pero puedes llamarnos para coordinar tu visita y evitar esperas.',
   },
   {
     q: '¿Cómo pido una cotización?',
-    a: `Escríbenos por WhatsApp al ${PHONE_DISPLAY} con la marca y modelo de tu vehículo y el problema que presenta. Te respondemos rápido.`,
+    a: `Llámanos al ${PHONE_DISPLAY} con la marca y modelo de tu vehículo y el problema que presenta. Te orientamos rápido.`,
   },
 ]
 
@@ -153,19 +152,12 @@ function organizationSchema() {
           name: 'Cartagena de Indias',
         },
       },
-      {
-        '@type': 'ContactPoint',
-        telephone: PHONE_TEL,
-        contactType: 'sales',
-        url: WHATSAPP_URL,
-        availableLanguage: ['Spanish'],
-      },
     ],
     sameAs: [INSTAGRAM_URL],
     potentialAction: {
       '@type': 'ContactAction',
-      name: 'Contactar por WhatsApp',
-      target: WHATSAPP_URL,
+      name: 'Llamar para cotizar',
+      target: `tel:${PHONE_TEL}`,
     },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',

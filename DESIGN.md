@@ -114,7 +114,7 @@ Mofles Cartagena renders a midday taller (workshop) aesthetic: a sun-bleached co
 ## Components
 
 ### Primary Button (Yellow Solid)
-**Role:** Main conversion action — 'Cotiza por WhatsApp', 'Llama ahora'
+**Role:** Main conversion action — 'Llama y cotiza'
 
 4px radius, background `--color-taller-yellow`, text `--color-asphalt-black`, weight 700 Archivo, padding 14px 28px. Hard offset shadow `--shadow-sign-sm` (solid, no blur) that shifts to `--shadow-sign-md` and translates -2px/-2px on hover, like a sticker lifting off the surface. No gradient, no glow — the flat solid fill does the work.
 
@@ -131,7 +131,7 @@ Two parallel horizontal bars (6px tall, `--color-chrome-steel`, rounded caps), 8
 ### Hazard Stripe Bar
 **Role:** Urgency marker — 'Abierto ahora', sticky contact bar top edge, limited-time offers
 
-8px tall strip filled with `--pattern-hazard-stripe` (45° repeating yellow/black, 20px band width). Appears as a thin top border on the sticky WhatsApp bar and as a full-width band directly under the hero. This is the system's single decorative flourish — never used more than once per screen.
+8px tall strip filled with `--pattern-hazard-stripe` (45° repeating yellow/black, 20px band width). Appears as a thin top border on the sticky contact bar and as a full-width band directly under the hero. This is the system's single decorative flourish — never used more than once per screen.
 
 ### Service Panel (Corrugated Card)
 **Role:** Service grid items — Silenciadores, Flexibles, Catalizadores, Empaques, Instalación, Diagnóstico
@@ -154,9 +154,9 @@ Folded-ribbon shape (CSS clip-path or two overlapping rectangles), `--color-sign
 Photo sits inside a hard-edged frame: 4px radius, 6px solid white border, `--shadow-sign-lg` offset shadow behind it, rotated -1.5deg to +1.5deg at random per image — like photos taped up in the shop office rather than a polished gallery grid.
 
 ### Sticky Contact Bar
-**Role:** Persistent bottom bar — phone + WhatsApp click-to-call, always visible on scroll
+**Role:** Persistent bottom bar — phone click-to-call, always visible on scroll
 
-Full-width, `--color-asphalt-black` background, hazard-stripe top edge (8px), two Plate Tags (Call / WhatsApp) right-aligned with icon-first Primary Buttons, Diesel Navy text label 'Diagnóstico gratis' left-aligned in Space Mono.
+Full-width, `--color-asphalt-black` background, hazard-stripe top edge (8px), a single Call Plate Tag right-aligned with an icon-first Primary Button, Diesel Navy text label 'Diagnóstico gratis' left-aligned in Space Mono.
 
 ### Logo Badge Lockup
 **Role:** Header wordmark, favicon source, footer mark

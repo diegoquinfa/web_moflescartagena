@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import { Gauge, MessageCircle, Wrench } from 'lucide-react'
-import { WHATSAPP_URL } from './site-data'
+import { Gauge, Phone, Wrench } from 'lucide-react'
+import { TEL_HREF } from './site-data'
 import { SectionHeading, PipeDivider, PrimaryButton } from './ui'
 
 const SERVICES_IMGS = [
@@ -112,8 +112,8 @@ export function Services() {
         </div>
 
         <div className="mt-12 flex justify-center">
-          <PrimaryButton href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-            <MessageCircle className="h-4 w-4" aria-hidden="true" />
+          <PrimaryButton href={TEL_HREF}>
+            <Phone className="h-4 w-4" aria-hidden="true" />
             Solicitar información
           </PrimaryButton>
         </div>
