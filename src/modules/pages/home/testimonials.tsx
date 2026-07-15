@@ -70,7 +70,7 @@ function TestimonialCard({ testimonial }: { testimonial: (typeof TESTIMONIALS)[n
 
 function TestimonialTrack({ ariaHidden = false }: { ariaHidden?: boolean }) {
   return (
-    <div aria-hidden={ariaHidden}>
+    <div aria-hidden={ariaHidden} className="[display:contents]">
       {TESTIMONIALS.map((t) => (
         <TestimonialCard key={t.name} testimonial={t} />
       ))}
