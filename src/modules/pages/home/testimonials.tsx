@@ -47,7 +47,7 @@ const TESTIMONIALS = [
 
 function TestimonialCard({ testimonial }: { testimonial: (typeof TESTIMONIALS)[number] }) {
   return (
-    <figure className="flex h-[280px] w-[320px] shrink-0 flex-col rounded-lg border-2 border-asphalt-black bg-pure-white p-6 shadow-sign-sm sm:h-[300px] sm:w-[360px]">
+    <figure className="flex h-70 w-[320px] shrink-0 flex-col rounded-lg border-2 border-asphalt-black bg-pure-white p-6 shadow-sign-sm sm:h-75 sm:w-90">
       <div className="flex gap-0.5 text-taller-yellow" aria-label="5 de 5 estrellas">
         {Array.from({ length: 5 }).map((_, i) => (
           <Star key={i} className="h-5 w-5 fill-current" aria-hidden="true" />
