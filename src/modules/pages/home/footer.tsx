@@ -17,7 +17,7 @@ export function Footer() {
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-3">
             <Image
-              src="/images/logo.png"
+              src="/images/logo.webp"
               alt="Logo Mofles Cartagena"
               width={52}
               height={52}

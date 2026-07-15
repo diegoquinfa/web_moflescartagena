@@ -13,6 +13,7 @@ const nextConfig: NextConfig = {
     //     pathname: '/api/media/file/**',
     //   },
     // ],
+    minimumCacheTTL: 86400, // 1 day — applies to both the optimizer cache and the browser Cache-Control header
   },
   webpack: (webpackConfig) => {
     webpackConfig.resolve.extensionAlias = {

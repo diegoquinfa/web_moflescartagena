@@ -115,15 +115,20 @@ export function SectionHeading({
   eyebrow,
   title,
   className,
+  id,
 }: {
   eyebrow: string
   title: string
   className?: string
+  id?: string
 }) {
   return (
     <div className={cn("flex flex-col items-center gap-3 text-center", className)}>
       <Eyebrow>{eyebrow}</Eyebrow>
-      <h2 className="font-bebas-neue text-4xl leading-none tracking-[0.01em] text-diesel-navy sm:text-5xl md:text-[56px]">
+      <h2
+        id={id}
+        className="font-bebas-neue text-4xl leading-none tracking-[0.01em] text-diesel-navy sm:text-5xl md:text-[56px]"
+      >
         {title}
       </h2>
     </div>

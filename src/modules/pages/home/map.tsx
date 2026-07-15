@@ -10,9 +10,9 @@ const DIRECTIONS_URL =
 
 export function MapSection() {
   return (
-    <section id="ubicacion" className="bg-cartagena-sand">
+    <section id="ubicacion" aria-labelledby="ubicacion-heading" className="bg-cartagena-sand">
       <div className="mx-auto max-w-295 px-4 py-20 sm:px-6 md:py-24">
-        <SectionHeading eyebrow="Visítanos" title="Encuéntranos en Cartagena" />
+        <SectionHeading id="ubicacion-heading" eyebrow="Visítanos" title="Encuéntranos en Cartagena" />
 
         <div className="mt-10 grid gap-8 lg:grid-cols-2">
           <div className="overflow-hidden rounded-lg border-2 border-asphalt-black bg-pure-white shadow-sign-md">

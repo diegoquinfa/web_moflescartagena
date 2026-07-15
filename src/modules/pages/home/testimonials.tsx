@@ -82,11 +82,15 @@ export function Testimonials() {
   return (
     <section
       id="testimonios"
-      aria-label="Opiniones de nuestros clientes"
+      aria-labelledby="testimonios-heading"
       className="overflow-hidden bg-cartagena-sand py-20 md:py-24"
     >
       <div className="mx-auto max-w-295 px-4 sm:px-6">
-        <SectionHeading eyebrow="Clientes" title="Lo que dicen de nosotros" />
+        <SectionHeading
+          id="testimonios-heading"
+          eyebrow="Clientes"
+          title="Lo que dicen de nosotros"
+        />
         <PipeDivider className="mt-6" />
       </div>
 

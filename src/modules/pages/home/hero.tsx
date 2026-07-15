@@ -6,7 +6,7 @@ import StoreStatusBadge from '@/shared/ui/components/store-status-badge'
 
 export function Hero() {
   return (
-    <section id="top" className="bg-taller-yellow">
+    <section id="top" aria-labelledby="hero-heading" className="bg-taller-yellow">
       <div className="mx-auto grid max-w-295 items-center gap-10 px-4 py-14 sm:px-6 md:py-20 lg:grid-cols-2 lg:gap-12">
         <div className="flex flex-col gap-6">
           <div className="flex flex-wrap items-center gap-3">
@@ -14,7 +14,10 @@ export function Hero() {
             <StoreStatusBadge />
           </div>
 
-          <h1 className="font-bebas-neue text-[56px] leading-[0.95] tracking-[0.01em] text-diesel-navy sm:text-[72px] md:text-[84px]">
+          <h1
+            id="hero-heading"
+            className="font-bebas-neue text-[56px] leading-[0.95] tracking-[0.01em] text-diesel-navy sm:text-[72px] md:text-[84px]"
+          >
             Silenciadores, flexibles y catalizadores para tu vehículo
           </h1>
 
@@ -48,12 +51,13 @@ export function Hero() {
         <div className="relative">
           <div className="rotate-[-1.5deg] rounded-lg border-[6px] border-pure-white shadow-sign-lg">
             <Image
-              src="/images/storefront.png"
-              alt="Fachada del taller Mofles Cartagena con puerta amarilla y aviso"
+              src="/images/storefront.webp"
+              alt="Fachada del taller Mofles Cartagena: local amarillo con puerta de enrollable negra y aviso distintivo en el barrio Torices"
               width={1080}
               height={920}
               className="h-full w-full rounded-xs object-cover"
               priority
+              fetchPriority="high"
             />
           </div>
           <div className="absolute -bottom-4 -left-3 rotate-2 rounded-xs bg-signal-red px-4 py-2 font-space-mono text-[13px] font-bold uppercase tracking-[0.08em] text-pure-white shadow-[2px_2px_0px_0px_rgba(26,26,26,1)]">

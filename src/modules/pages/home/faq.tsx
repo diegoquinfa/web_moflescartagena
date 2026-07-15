@@ -31,9 +31,9 @@ export function Faq() {
   const [open, setOpen] = useState<number | null>(0)
 
   return (
-    <section id="faq" className="bg-cartagena-sand">
+    <section id="faq" aria-labelledby="faq-heading" className="bg-cartagena-sand">
       <div className="mx-auto max-w-205 px-4 py-20 sm:px-6 md:py-24">
-        <SectionHeading eyebrow="Dudas frecuentes" title="Preguntas frecuentes" />
+        <SectionHeading id="faq-heading" eyebrow="Dudas frecuentes" title="Preguntas frecuentes" />
         <PipeDivider className="mt-6" />
 
         <div className="mt-10 flex flex-col gap-4">

@@ -1,35 +1,121 @@
+import type { Metadata, Viewport } from 'next'
 import React from 'react'
 import './styles.css'
 import { Bebas_Neue, Archivo, Space_Mono } from 'next/font/google'
 
-import { Metadata, Viewport } from 'next'
+const SITE_URL = 'https://moflescartagena.com'
 
 const bebasNeue = Bebas_Neue({
   subsets: ['latin'],
   weight: '400',
   variable: '--font-bebas-neue',
+  display: 'swap',
 })
 
 const archivo = Archivo({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   variable: '--font-archivo',
+  display: 'swap',
 })
 
 const spaceMono = Space_Mono({
   subsets: ['latin'],
   weight: ['400', '700'],
   variable: '--font-space-mono',
+  display: 'swap',
 })
 
+const TITLE = 'Mofles Cartagena · Taller de Escapes en Cartagena'
+const DESCRIPTION =
+  'Taller especializado en sistemas de escape en Cartagena. Silenciadores, flexibles, catalizadores y diagnóstico gratuito. Trabajo garantizado.'
+
 export const metadata: Metadata = {
-  title: 'Mofles Cartagena | Silenciadores, Flexibles, Catalizadores y Empaques',
-  description:
-    'Taller especializado en sistemas de escape en Cartagena. Silenciadores, pre silenciadores, flexibles, catalizadores, empaques, instalación de tubería de escape y diagnóstico gratuito.',
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: TITLE,
+    template: '%s | Mofles Cartagena',
+  },
+  description: DESCRIPTION,
+  keywords: [
+    'mofles cartagena',
+    'taller de escapes cartagena',
+    'silenciadores cartagena',
+    'catalizadores cartagena',
+    'flexibles de escape',
+    'reparación de mofles',
+    'diagnóstico de escape gratis',
+    'tubería de escape cartagena',
+  ],
+  authors: [{ name: 'Mofles Cartagena', url: SITE_URL }],
+  creator: 'Mofles Cartagena',
+  publisher: 'Mofles Cartagena',
+  category: 'Automotive',
+  applicationName: 'Mofles Cartagena',
+  alternates: {
+    canonical: '/',
+    languages: {
+      'es-CO': '/',
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'es_CO',
+    url: SITE_URL,
+    siteName: 'Mofles Cartagena',
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [
+      {
+        url: '/images/storefront.webp',
+        width: 1080,
+        height: 920,
+        alt: 'Fachada del taller Mofles Cartagena con puerta amarilla enrollable',
+        type: 'image/webp',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ['/images/storefront.webp'],
+  },
+  icons: {
+    icon: [
+      { url: '/images/logo.webp', type: 'image/webp', sizes: '512x512' },
+    ],
+    shortcut: [{ url: '/images/logo.webp', type: 'image/webp' }],
+    apple: { url: '/images/logo.webp', type: 'image/webp', sizes: '180x180' },
+  },
+  formatDetection: {
+    telephone: true,
+    address: true,
+    email: false,
+  },
 }
 
 export const viewport: Viewport = {
-  themeColor: '#F2B705',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#F2B705' },
+    { media: '(prefers-color-scheme: dark)', color: '#1A1A1A' },
+  ],
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  colorScheme: 'light',
 }
 
 export default async function RootLayout(props: { children: React.ReactNode }) {
@@ -37,12 +123,10 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
 
   return (
     <html
-      lang="es"
+      lang="es-CO"
       className={`${bebasNeue.variable} ${archivo.variable} ${spaceMono.variable} bg-cartagena-sand`}
     >
-      <body className="font-archivo antialiased">
-        <main>{children}</main>
-      </body>
+      <body className="font-archivo antialiased">{children}</body>
     </html>
   )
 }

@@ -4,17 +4,19 @@ import { INSTAGRAM } from "./site-data"
 
 export function About() {
   return (
-    <section id="nosotros" className="bg-cartagena-sand">
+    <section id="nosotros" aria-labelledby="nosotros-heading" className="bg-cartagena-sand">
       <div className="mx-auto grid max-w-295 items-center gap-12 px-4 py-20 sm:px-6 md:py-24 lg:grid-cols-2">
         <div className="order-2 lg:order-1">
           <div className="relative">
             <div className="rotate-[-1.5deg] rounded-lg border-[6px] border-pure-white shadow-sign-lg">
               <Image
-                src="/images/bay.png"
-                alt="Bahía de servicio de Mofles Cartagena con un vehículo en atención"
+                src="/images/bay.webp"
+                alt="Bahía de servicio (Pista 2) de Mofles Cartagena con un vehículo en proceso de revisión de escape"
                 width={1080}
                 height={1350}
                 className="h-full w-full rounded-xs object-cover"
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                loading="lazy"
               />
             </div>
             <div className="absolute -bottom-4 -right-3 rotate-2">
@@ -25,7 +27,10 @@ export function About() {
 
         <div className="order-1 flex flex-col gap-5 lg:order-2">
           <Eyebrow className="text-signal-red">Nuestra empresa</Eyebrow>
-          <h2 className="font-bebas-neue text-4xl leading-none tracking-[0.01em] text-diesel-navy sm:text-5xl md:text-[56px]">
+          <h2
+            id="nosotros-heading"
+            className="font-bebas-neue text-4xl leading-none tracking-[0.01em] text-diesel-navy sm:text-5xl md:text-[56px]"
+          >
             Un taller hecho en Cartagena, para los carros de Cartagena
           </h2>
           <p className="font-archivo text-base leading-relaxed text-asphalt-black">

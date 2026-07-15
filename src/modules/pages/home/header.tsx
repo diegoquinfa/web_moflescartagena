@@ -14,7 +14,7 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-295 items-center justify-between px-4 sm:px-6">
         <a href="#top" className="flex items-center gap-3">
           <Image
-            src="/images/logo.png"
+            src="/images/logo.webp"
             alt="Logo Mofles Cartagena"
             width={44}
             height={44}

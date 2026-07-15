@@ -5,25 +5,25 @@ import { SectionHeading, PipeDivider, PrimaryButton } from './ui'
 
 const SERVICES_IMGS = [
   {
-    img: '/images/producto-silenciador.png',
+    img: '/images/producto-silenciador.webp',
     name: 'Silenciadores',
     code: 'SIL-01',
     desc: 'Reparación y cambio de silenciadores y pre silenciadores para un escape sin ruidos.',
   },
   {
-    img: '/images/producto-catalizador.png',
+    img: '/images/producto-catalizador.webp',
     name: 'Catalizadores',
     code: 'CAT-02',
     desc: 'Diagnóstico y reemplazo de catalizadores para cumplir con la emisión de gases.',
   },
   {
-    img: '/images/producto-flexible.png',
+    img: '/images/producto-flexible.webp',
     name: 'Flexibles',
     code: 'FLX-03',
     desc: 'Reemplazo de flexibles rotos que eliminan fugas y vibraciones en el sistema de escape.',
   },
   {
-    img: '/images/producto-tuberia.png',
+    img: '/images/producto-tuberia.webp',
     name: 'Instalación de tubería',
     code: 'TUB-04',
     desc: 'Fabricación e instalación de tubería de escape a la medida de tu vehículo.',
@@ -46,9 +46,9 @@ const SERVICES_ICON = [
 
 export function Services() {
   return (
-    <section id="servicios" className="bg-cartagena-sand">
+    <section id="servicios" aria-labelledby="servicios-heading" className="bg-cartagena-sand">
       <div className="mx-auto max-w-295 px-4 py-20 sm:px-6 md:py-24">
-        <SectionHeading eyebrow="Lo que hacemos" title="Servicios especializados" />
+        <SectionHeading id="servicios-heading" eyebrow="Lo que hacemos" title="Servicios especializados" />
         <PipeDivider className="mt-6" />
 
         <div className="mt-10 grid gap-6 grid-cols-2 lg:grid-cols-4">
@@ -60,9 +60,11 @@ export function Services() {
               <div className="relative aspect-4/3 border-b-2 border-asphalt-black bg-cartagena-sand">
                 <Image
                   src={product.img || '/placeholder.svg'}
-                  alt={`Producto: ${product.name}`}
+                  alt={`${product.name} instalado en taller Mofles Cartagena`}
                   fill
                   className="object-cover"
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                  loading="lazy"
                 />
                 {/*<PlateTag className="hidden absolute left-3 top-3 text-[12px]">{product.code}</PlateTag>*/}
               </div>

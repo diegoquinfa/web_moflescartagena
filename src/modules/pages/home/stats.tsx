@@ -7,7 +7,10 @@ const STATS = [
 
 export function Stats() {
   return (
-    <section className="bg-diesel-navy" aria-label="Estadísticas">
+    <section className="bg-diesel-navy" aria-labelledby="stats-heading">
+      <h2 id="stats-heading" className="sr-only">
+        Nuestros números en Cartagena
+      </h2>
       <div className="mx-auto grid max-w-295 grid-cols-2 gap-px overflow-hidden px-4 py-12 sm:px-6 md:grid-cols-4">
         {STATS.map((stat) => (
           <div key={stat.label} className="flex flex-col items-center gap-1 px-4 py-4 text-center">
