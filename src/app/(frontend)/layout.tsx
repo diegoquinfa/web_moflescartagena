@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import Script from 'next/script'
 import React from 'react'
 import './styles.css'
+import { ScrollToTopOnHomeClick } from '../../modules/pages/home/scroll-to-top-on-home-click'
 import { Bebas_Neue, Archivo, Space_Mono } from 'next/font/google'
 
 const SITE_URL = 'https://moflescartagena.com'
@@ -129,6 +130,7 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
     >
       <body className="font-archivo antialiased">
         {children}
+        <ScrollToTopOnHomeClick />
         <Script
           src="https://analytics.ahrefs.com/analytics.js"
           strategy="afterInteractive"
