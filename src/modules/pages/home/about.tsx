@@ -43,6 +43,10 @@ export function About() {
             calidad y trabajo garantizado. Somos un negocio familiar que conoce cada vehículo que
             entra a la pista.
           </p>
+          <p className="font-archivo text-base leading-relaxed text-asphalt-black">
+            Estamos en Torices, a pocos minutos de Manga, Bocagrande y Pie de la Popa, y
+            recibimos carros de toda Cartagena.
+          </p>
           <div className="flex flex-wrap items-center gap-3 pt-2">
             <PlateTag>{INSTAGRAM}</PlateTag>
             <PlateTag>Cartagena · Bolívar</PlateTag>

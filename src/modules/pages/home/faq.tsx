@@ -49,6 +49,8 @@ export function Faq() {
                   onClick={() => setOpen(isOpen ? null : i)}
                   className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
                   aria-expanded={isOpen}
+                  aria-controls={`faq-panel-${i}`}
+                  id={`faq-trigger-${i}`}
                 >
                   <span className="font-bebas-neue text-xl leading-tight tracking-[0.01em] text-diesel-navy">
                     {faq.q}
@@ -57,11 +59,18 @@ export function Faq() {
                     {isOpen ? <Minus className="h-4 w-4" /> : <Plus className="h-4 w-4" />}
                   </span>
                 </button>
-                {isOpen && (
-                  <p className="border-t-2 border-cartagena-sand px-5 py-4 font-archivo text-base leading-relaxed text-asphalt-black">
+                <div
+                  id={`faq-panel-${i}`}
+                  aria-labelledby={`faq-trigger-${i}`}
+                  aria-hidden={!isOpen}
+                  className={`overflow-hidden border-t-2 border-cartagena-sand transition-all duration-300 ease-out ${
+                    isOpen ? "max-h-96" : "max-h-0"
+                  }`}
+                >
+                  <p className="px-5 py-4 font-archivo text-base leading-relaxed text-asphalt-black">
                     {faq.a}
                   </p>
-                )}
+                </div>
               </div>
             )
           })}

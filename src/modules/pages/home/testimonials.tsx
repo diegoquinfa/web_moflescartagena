@@ -68,13 +68,13 @@ function TestimonialCard({ testimonial }: { testimonial: (typeof TESTIMONIALS)[n
   )
 }
 
-function TestimonialTrack() {
+function TestimonialTrack({ ariaHidden = false }: { ariaHidden?: boolean }) {
   return (
-    <>
+    <div aria-hidden={ariaHidden}>
       {TESTIMONIALS.map((t) => (
         <TestimonialCard key={t.name} testimonial={t} />
       ))}
-    </>
+    </div>
   )
 }
 
@@ -100,7 +100,7 @@ export function Testimonials() {
       >
         <div className="flex w-max gap-6 animate-marquee hover:[animation-play-state:paused] motion-reduce:w-fit motion-reduce:animate-none motion-reduce:gap-4">
           <TestimonialTrack />
-          <TestimonialTrack />
+          <TestimonialTrack ariaHidden />
         </div>
       </div>
 
