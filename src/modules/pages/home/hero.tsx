@@ -18,7 +18,7 @@ export function Hero() {
             id="hero-heading"
             className="font-bebas-neue text-[56px] leading-[0.95] tracking-[0.01em] text-diesel-navy sm:text-[72px] md:text-[84px]"
           >
-            Silenciadores, flexibles y catalizadores para tu vehículo
+            <span className='sr-only'>Mofles Cartagena</span> Taller de reparación de silenciadores, flexibles y catalizadores
           </h1>
 
           <p className="max-w-xl font-archivo text-lg leading-relaxed text-asphalt-black">
