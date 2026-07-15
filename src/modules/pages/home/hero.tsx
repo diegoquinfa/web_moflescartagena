@@ -55,6 +55,7 @@ export function Hero() {
               alt="Fachada del taller Mofles Cartagena: local amarillo con puerta de enrollable negra y aviso distintivo en el barrio Torices"
               width={1080}
               height={920}
+              sizes="(min-width: 1024px) 50vw, 100vw"
               className="h-full w-full rounded-xs object-cover"
               priority
               fetchPriority="high"

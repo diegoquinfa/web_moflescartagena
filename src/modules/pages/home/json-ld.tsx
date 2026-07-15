@@ -140,7 +140,6 @@ function organizationSchema() {
         '@type': 'ContactPoint',
         telephone: PHONE_TEL,
         contactType: 'customer service',
-        contactOption: 'TollFree',
         availableLanguage: ['Spanish'],
         areaServed: {
           '@type': 'City',
@@ -237,7 +236,9 @@ function breadcrumbSchema() {
         '@type': 'ListItem',
         position: i + 2,
         name: link.label,
-        item: `${SITE_URL}/${link.href.replace('#', '')}`,
+        // Para single-page apps con anchor links, el item usa #fragment
+        // en lugar de rutas separadas. Google soporta este formato.
+        item: `${SITE_URL}/${link.href}`,
       })),
     ],
   }

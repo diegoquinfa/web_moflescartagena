@@ -28,7 +28,7 @@ const spaceMono = Space_Mono({
 
 const TITLE = 'Mofles Cartagena · Taller de Escapes en Cartagena'
 const DESCRIPTION =
-  'Taller especializado en sistemas de escape en Cartagena. Silenciadores, flexibles, catalizadores y diagnóstico gratuito. Trabajo garantizado.'
+  'Taller de escapes en Cartagena. Silenciadores, flexibles, catalizadores, empaques e instalación de tubería. Diagnóstico gratuito y trabajo garantizado.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
