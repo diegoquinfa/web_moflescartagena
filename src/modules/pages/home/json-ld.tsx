@@ -5,6 +5,7 @@ import {
   INSTAGRAM_URL,
   ADDRESS,
   NAV_LINKS,
+  DIRECTIONS_URL,
 } from './site-data'
 
 const SITE_URL = 'https://moflescartagena.com'
@@ -110,25 +111,31 @@ const REVIEW_SNIPPETS = [
 function organizationSchema() {
   return {
     '@context': 'https://schema.org',
-    '@type': 'AutomotiveRepairShop',
+    '@type': 'AutoRepair',
     '@id': `${SITE_URL}/#business`,
     name: 'Mofles Cartagena',
-    alternateName: 'Mofles Cartagena Taller de Escapes',
+    alternateName: 'Mofles Cartagena - Taller de mofles',
     description:
-      'Taller especializado en sistemas de escape en Cartagena. Silenciadores, flexibles, catalizadores, empaques, instalación de tubería de escape y diagnóstico gratuito.',
+      'Taller especializado en sistemas de escape en Cartagena. Silenciadores, flexibles, catalizadores, empaques, instalación de mofles y diagnóstico gratuito.',
     url: SITE_URL,
     logo: LOGO_URL,
     image: STOREFRONT_URL,
     telephone: PHONE_TEL,
     priceRange: '$$',
+    currenciesAccepted: 'COP',
+    areaServed: {
+      '@type': 'City',
+      name: 'Cartagena de Indias',
+    },
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Cra. 14 #35-138',
+      streetAddress: 'Cra. 14 #35-138, Torices',
       addressLocality: 'Cartagena de Indias',
       addressRegion: 'Bolívar',
+      postalCode: '130002',
       addressCountry: 'CO',
-      neighborhood: 'Torices',
     },
+    hasMap: DIRECTIONS_URL,
     geo: {
       '@type': 'GeoCoordinates',
       latitude: 10.427455,
@@ -155,6 +162,11 @@ function organizationSchema() {
       },
     ],
     sameAs: [INSTAGRAM_URL],
+    potentialAction: {
+      '@type': 'ContactAction',
+      name: 'Contactar por WhatsApp',
+      target: WHATSAPP_URL,
+    },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Servicios de escape',
@@ -230,7 +242,7 @@ function breadcrumbSchema() {
         '@type': 'ListItem',
         position: 1,
         name: 'Inicio',
-        item: SITE_URL,
+        item: `${SITE_URL}/`,
       },
       ...NAV_LINKS.map((link, i) => ({
         '@type': 'ListItem',

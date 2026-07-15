@@ -8,6 +8,7 @@ import {
   ADDRESS,
 } from "./site-data"
 import { PlateTag, HazardBar } from "./ui"
+import { HomeLink } from "./home-link"
 
 export function Footer() {
   return (
@@ -15,7 +16,7 @@ export function Footer() {
       <HazardBar />
       <div className="mx-auto grid max-w-295 gap-10 px-4 py-14 sm:px-6 md:grid-cols-3">
         <div className="flex flex-col gap-4">
-          <div className="flex items-center gap-3">
+          <HomeLink className="flex items-center gap-3">
             <Image
               src="/images/logo.webp"
               alt="Logo Mofles Cartagena"
@@ -26,7 +27,7 @@ export function Footer() {
             <span className="font-bebas-neue text-2xl leading-none tracking-[0.01em] text-taller-yellow">
               Mofles Cartagena
             </span>
-          </div>
+          </HomeLink>
           <p className="max-w-xs font-archivo text-sm leading-relaxed text-chrome-steel">
             Silenciadores · Pre silenciadores · Flexibles · Catalizadores · Empaques y soportes ·
             Instalación de tubería de escape.

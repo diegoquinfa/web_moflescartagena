@@ -5,6 +5,7 @@ import Image from "next/image"
 import { Menu, X, Phone } from "lucide-react"
 import { NAV_LINKS, PHONE_TEL, PHONE_DISPLAY } from "./site-data"
 import { PlateTag } from "./ui"
+import { HomeLink } from "./home-link"
 
 export function Header() {
   const [open, setOpen] = useState(false)
@@ -12,7 +13,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b-2 border-asphalt-black bg-cartagena-sand/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-295 items-center justify-between px-4 sm:px-6">
-        <a href="#top" className="flex items-center gap-3">
+        <HomeLink className="flex items-center gap-3">
           <Image
             src="/images/logo.webp"
             alt="Logo Mofles Cartagena"
@@ -23,7 +24,7 @@ export function Header() {
           <span className="font-bebas-neue text-2xl leading-none tracking-[0.01em] text-diesel-navy">
             Mofles Cartagena
           </span>
-        </a>
+        </HomeLink>
 
         <nav className="hidden items-center gap-6 lg:flex" aria-label="Principal">
           {NAV_LINKS.map((link) => (
