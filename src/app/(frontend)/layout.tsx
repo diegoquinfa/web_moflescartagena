@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next'
+import Script from 'next/script'
 import React from 'react'
 import './styles.css'
 import { Bebas_Neue, Archivo, Space_Mono } from 'next/font/google'
@@ -126,7 +127,14 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
       lang="es-CO"
       className={`${bebasNeue.variable} ${archivo.variable} ${spaceMono.variable} bg-cartagena-sand`}
     >
-      <body className="font-archivo antialiased">{children}</body>
+      <body className="font-archivo antialiased">
+        {children}
+        <Script
+          src="https://analytics.ahrefs.com/analytics.js"
+          strategy="afterInteractive"
+          data-key="J9qSM46J52XryivgtbC+TQ"
+        />
+      </body>
     </html>
   )
 }
